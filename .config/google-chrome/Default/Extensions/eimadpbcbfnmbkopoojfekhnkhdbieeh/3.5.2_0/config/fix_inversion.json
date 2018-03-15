@@ -1,0 +1,630 @@
+{
+    "common": {
+        "invert": [
+            "img, video, :not(object):not(body)>embed, object",
+            "iframe",
+            "svg image",
+            "[style*='background:url'], [style*='background-image:url']",
+            "[style*='background: url'], [style*='background-image: url']",
+            "[background]",
+            "twitterwidget"
+        ],
+        "noinvert": [
+            "[style*='background:url'] *, [style*='background-image:url'] *",
+            "[style*='background: url'] *, [style*='background-image: url'] *",
+            "input",
+            "[background] *"
+        ],
+        "removebg": [
+            "iframe:not([title='Disqus']):not([src*='ihlenndgcmojhcghmfjfneahoeklbjjh'])"
+        ],
+        "rules": [
+            "#disqus_thread > :first-child { background: black !important; }"
+        ]
+    },
+    "sites": [
+        {
+            "url": "airbnb.com",
+            "invert": [
+                ".background-cover, #footer, #photo-modal"
+            ],
+            "noinvert": "#footer *, #photo-modal *"
+        },
+        {
+            "url": "atlassian.net",
+            "invert": [
+                ".EditPage_withPanels_3Hr, #toolbar, #savebar-container"
+            ]
+        },
+        {
+            "url": "basho.com",
+            "invert": [
+                "#site-navigation, footer, header, .featured-news-wrapper",
+                ":not(.lang):not(#foot-logo)>img"
+            ]
+        },
+        {
+            "url": "bbc.com",
+            "invert": [
+                "div.orb-nav-section.orb-nav-blocks > a > img"
+            ]
+        },
+        {
+            "url": "betterexplained.com",
+            "noinvert": "img.tex"
+        },
+        {
+            "url": [
+                "bit-tech.net",
+                "forums.bit-tech.net"
+            ],
+            "invert": [
+                "div#subNav, div#anotherSubNav, .footerContainer, div.footer, #bitFooter, .nodeIcon",
+                "li.navTab.forums.selected, li.navTab.xengallery.selected, li.navTab.members.selected"
+            ],
+            "removebg": "#blurBackground, .background-image, #headerMover, #loginBar"
+        },
+        {
+            "url": "bytesloader.com",
+            "invert": ".footer-distributed, .navbar-inverse"
+        },
+        {
+            "url": "dedication.pl",
+            "invert": ".wwzing"
+        },
+        {
+            "url": "deviantart.com",
+            "invert": [
+                "#navbar-menu",
+                "#overhead-collect",
+                ".text-wrap",
+                ".thumb > .info",
+                ".mobileMenuWrapper",
+                ".tv150-tag",
+                ".hero",
+                ".hero-thumb",
+                ".hero-thumb > .info",
+                ".loggedOut",
+                ".minibrowse-mobile-paddles-container"
+            ],
+            "noinvert": [
+                ".extra-info .avatar",
+                ".tt-crop > .tinythumb"
+            ]
+        },
+        {
+            "url": "docs.google.com",
+            "invert": ".jfk-palette-colorswatch"
+        },
+        {
+            "url": "docs.microsoft.com",
+            "invert": ".theme-dark"
+        },
+        {
+            "url": "duckduckgo.com",
+            "invert": [
+                "#logo_homepage_link",
+                "span.header__logo.js-logo-ddg"
+            ]
+        },
+        {
+            "url": "ebay.*",
+            "invert": [
+                "body[style*='background-image: url'] img",
+                "body[style*='background-image: url'] video",
+                "body[style*='background-image: url'] [style*='background-image: url']"
+            ],
+            "noinvert": "body[style*='background-image: url']"
+        },
+        {
+            "url": "electronics-tutorials.ws",
+            "removebg": "img"
+        },
+        {
+            "url": "electronjs.org",
+            "invert": [
+                "header",
+                ".jumbotron-home",
+                ".highlight-dark"
+            ]
+        },
+        {
+            "url": "evernote.com",
+            "noinvert": [
+                "iframe"
+            ]
+        },
+        {
+            "url": [
+                "exhentai.org",
+                "e-hentai.org"
+            ],
+            "invert": [
+                "#gd1",
+                ".gdtm > div"
+            ]
+        },
+        {
+            "url": "facebook.com",
+            "invert": [
+                "._3ixn, ._2teu, .uiStreamStory",
+                ".userContentWrapper canvas, ._4lqu, ._4lqt",
+                "._24ws, ._1z0-",
+                "._19eb"
+            ],
+            "noinvert": ".uiStreamStory video",
+            "removebg": "._4d3w .stageWrapper",
+            "rules": "._2s1x ._2s1y { background: #9BB5E8 !important; color: black !important; border-bottom-color: #92A6CA !important; }"
+        },
+        {
+            "url": "feynmanlectures.caltech.edu",
+            "noinvert": "img"
+        },
+        {
+            "url": "gigaom.com",
+            "invert": ".bg"
+        },
+        {
+            "url": "github.com",
+            "invert": [
+                ".jumbotron-codelines",
+                ".bg-gray-dark",
+                ".bg-gray-dark .form-group",
+                ".header-logo-invertocat, .notification-indicator",
+                ".label, .label-color"
+            ],
+            "rules": [
+                "header { background-color: #dae1e7 !important; }",
+                ".Header .header-search-wrapper { background-color: rgba(0, 0, 0, 0.125) !important; }",
+                "header, .HeaderNavlink, .Header .header-search-input, .Header .header-search-input::placeholder { color: rgba(0, 0, 0, 0.75) !important; }",
+                ".Header .header-search-scope { color: rgba(0, 0, 0, 0.75) !important; border-right-color: #ccd7e1 !important; }",
+                ".select-menu-item.navigation-focus, .select-menu-item.navigation-focus.selected, .select-menu-item.navigation-focus.select-menu-action, .select-menu-item.navigation-focus .description-inline { color: black !important; background: #93c6ff !important }",
+                ".select-menu-item.navigation-focus>.octicon, .select-menu-item.navigation-focus.selected>.octicon, .select-menu-item.navigation-focus.select-menu-action>.octicon, .select-menu-item.navigation-focus .description-inline>.octicon { color: black !important; }"
+            ]
+        },
+        {
+            "url": [
+                "google.*",
+                "google.*.*"
+            ],
+            "invert": [
+                ".gb_2, .gb_M, .gsri_a, .gbii, .gbip, .azp, .aLF-aPX-KP, .irc_bg, .RY3tic, canvas.circle"
+            ],
+            "noinvert": [
+                ".irc_mi, .irc_rii, .irc_mut, .act-icon-dark-gray, .amI, .amJ, .adk, .adj, [src*='ic_'], [src*='black']",
+                "input[style*='data:image']",
+                "img[src*='/books/content?']"
+            ],
+            "rules": [
+                ".pI { background: rgba(255,255,255,.7) !important; }",
+                ".eB { background: rgba(255,255,255,.4) !important; }"
+            ]
+        },
+        {
+            "url": "granttree.co.uk",
+            "invert": "img, iframe, video, embed, .photo"
+        },
+        {
+            "url": "hysterical-amusement.surge.sh",
+            "invert": [
+                "body",
+                ".instructionsContainer",
+                "#liveOutput"
+            ]
+        },
+        {
+            "url": "ign.com",
+            "invert": ".video_embed_content-poster, .video_embed_content-poster-play-button",
+            "removebg": "#review-promo"
+        },
+        {
+            "url": "imdb.com",
+            "invert": "#nb20, .vital, .poster, .slate, .slate_fade_top, .slate_fade_bottom"
+        },
+        {
+            "url": "io9.com",
+            "rules": "html { height: auto !important; }"
+        },
+        {
+            "url": "khanacademy.org",
+            "invert": [
+                ".task-container .modal-backdrop"
+            ]
+        },
+        {
+            "url": "libretexts.org",
+            "noinvert": "img"
+        },
+        {
+            "url": "lifehacker.com",
+            "invert": ".videoCube a .thumbBlock",
+            "rules": "html { height: auto !important; }"
+        },
+        {
+            "url": "linkedin.com",
+            "invert": [
+                "#top-header, #responsive-nav-scrollable"
+            ],
+            "noinvert": [
+                "#top-header *, #responsive-nav-scrollable *"
+            ]
+        },
+        {
+            "url": "mail.live.com",
+            "invert": [
+                "img:not([src='https://a.gfx.ms/rte_metro2.png'])",
+                "video, object, .ComposeContent"
+            ],
+            "removebg": ".ComposeContent"
+        },
+        {
+            "url": "mathpages.com",
+            "noinvert": "img"
+        },
+        {
+            "url": [
+                "mathprofi.ru",
+                "mathprofi.net"
+            ],
+            "noinvert": [
+                "p img"
+            ]
+        },
+        {
+            "url": "medium.com",
+            "noinvert": ".canvas-renderer"
+        },
+        {
+            "url": "messenger.com",
+            "invert": "._4tsk"
+        },
+        {
+            "url": "mp.weixin.qq.com/wiki",
+            "noinvert": [
+                ".res_iframe"
+            ]
+        },
+        {
+            "url": [
+                "my.mail.ru/vk",
+                "my.mail.ru/mail",
+                "my.mail.ru/music",
+                "my.mail.ru/ok",
+                "my.mail.ru/bk",
+                "my.mail.ru/list",
+                "my.mail.ru/gmail.com"
+            ],
+            "invert": [
+                ".b-head-layer_music",
+                ".b-head__menu__logo",
+                ".b-head__portal-navigation-wrapper",
+                ".b-history-event__videoevent-name",
+                ".b-music__genre__header__info",
+                ".b-music__playlists--tile__item__controls",
+                ".b-music__playlists--tile__item__stats",
+                ".b-music__section__content",
+                ".b-music__section__footer",
+                ".b-music__section__row",
+                ".b-music__top-artists__item__cover",
+                ".b-music__top-artists__item__info",
+                ".b-music__user-header__content",
+                ".b-music__user-header__controls",
+                ".b-music__user-header__title",
+                ".b-popup__fade",
+                ".btn-import",
+                ".filed-images",
+                ".l-music__menu-main",
+                ".l-music__portal-navigation",
+                ".l-music__search-form",
+                ".l-music__sidebar__playlist-playing > .cover",
+                ".playlists-block",
+                ".profile__cover_empty_female",
+                ".profile__cover_empty_man",
+                ".smiles",
+                ".songs-table__row__col__cover",
+                ".ui-button-main"
+            ],
+            "noinvert": [
+                "html",
+                ".b-music__artist-header__content",
+                ".b-music__artist-header__cover",
+                ".b-music__section__cell",
+                ".fixed-menu > .b-music__section__footer",
+                ".l-mm__avatar",
+                ".l-music__player__song__cover",
+                ".playlists-block"
+            ],
+            "removebg": ".b-music__user-header__bg--no-profile-cover",
+            "rules": [
+                ".l-music { background: #111 }"
+            ]
+        },
+        {
+            "url": "na.op.gg",
+            "invert": ".__sprite"
+        },
+        {
+            "url": "onliner.by",
+            "invert": [
+                ".b-tile-main, .b-teasers-2__teaser, .news-tiles__subtitle",
+                ".b-opinions-main-2__tile, .news-header__top > .news-header__title"
+            ],
+            "noinvert": ".b-opinions-main-2__tile *"
+        },
+        {
+            "url": "openclassrooms.com",
+            "invert": [
+                "code.ace"
+            ],
+            "noinvert": "[class*=ace] *"
+        },
+        {
+            "url": "outlook.live.com",
+            "invert": "#O365_NavHeader"
+        },
+        {
+            "url": "pandora.com",
+            "invert": "#body, .contentbox, #detailContainer, #mainContent, .slidesBackground, .slidesForeground",
+            "rules": [
+                ".skinContainer, .slidesBackground, .slidesForeground, #trackDetail, .track_detail_close { background-color: black !important; }",
+                ".fxCol-cont-1, .jspContainer, #trackInfoButtons { background-color: white !important; }",
+                "#brandingBar, .contentnav, .top { background-color: #3d4043 !important;}",
+                "#playerBar { background-color: #0d0d0d !important;}"
+            ]
+        },
+        {
+            "url": "play.afreecatv.com",
+            "invert": "#afreecatv_player"
+        },
+        {
+            "url": "poeaffix.net",
+            "invert": "#header",
+            "noinvert": "img"
+        },
+        {
+            "url": "producthunt.com",
+            "invert": ".backgroundImage_1hK9M, .v-image",
+            "noinvert": [
+                ".backgroundImage_1hK9M *",
+                ".v-image *"
+            ],
+            "rules": [
+                ".post-detail--body--gallery-fullscreen--image { background-color: black; }"
+            ]
+        },
+        {
+            "url": "quora.com",
+            "invert": ".section_photo"
+        },
+        {
+            "url": "reactjs.org",
+            "invert": ".gatsby-highlight"
+        },
+        {
+            "url": "reddit.com",
+            "invert": "#header-img"
+        },
+        {
+            "url": [
+                "ruby.sketchup.com",
+                "rubydoc.info"
+            ],
+            "invert": [
+                "#navbar"
+            ],
+            "noinvert": [
+                "#navbar a > img",
+                "#nav"
+            ]
+        },
+        {
+            "url": "scotch.io",
+            "invert": [
+                ".language-js, .language-javascript"
+            ]
+        },
+        {
+            "url": "semlar.com",
+            "invert": ".thumbnail, .col-sm-2, .img-rounded, #alert-list, .background-texture",
+            "noinvert": "img"
+        },
+        {
+            "url": "shop.ubi.com",
+            "invert": "#topNavbar, #UplayHeader"
+        },
+        {
+            "url": "slack.com",
+            "invert": [
+                ".client_channels_list_container",
+                "figure, .member_preview_link.member_image"
+            ],
+            "noinvert": [
+                ".client_channels_list_container *",
+                "figure *"
+            ]
+        },
+        {
+            "url": "spotify.com",
+            "invert": [
+                "img, iframe, video, embed",
+                ".hero, .header-main, .search-bar, #bg-wrap, #main"
+            ]
+        },
+        {
+            "url": [
+                "stackexchange.com",
+                "askubuntu.com",
+                "mathoverflow.com",
+                "serverfault.com",
+                "stackapps.com",
+                "stackoverflow.com",
+                "superuser.com"
+            ],
+            "rules": "#hlogo a { text-indent: -256em !important; }"
+        },
+        {
+            "url": "tpondemand.com",
+            "invert": [
+                ".tau-cover-view__overlay, .tau-app-secondary-pane, .app-header, .uv-popover-content"
+            ],
+            "noinvert": [
+                ".tau-app-secondary-pane *, .app-header *"
+            ]
+        },
+        {
+            "url": "tproger.ru",
+            "invert": [
+                ".top-duft-punk",
+                "#colophon"
+            ],
+            "noinvert": [
+                ".text_logo img",
+                ".tmenu_icon"
+            ]
+        },
+        {
+            "url": "tvtime.com",
+            "noinvert": [
+                ".page-sidebar *, .page-left *"
+            ]
+        },
+        {
+            "url": "twitch.tv",
+            "invert": [
+                "#site_footer, #carousel_background::after, #left_col, .player, .badge",
+                ".social-column, .top-nav"
+            ],
+            "noinvert": [
+                ".player *, .social-column *, .top-nav *"
+            ],
+            "removebg": [
+                "#carousel, .chat-container, .conversations-list-header",
+                ".dark_wrapper ul, html, .nav",
+                ".js-conversations-list, .js-conversations-list-bottom-bar",
+                ".rightcol-content > .top"
+            ],
+            "rules": [
+                ".chat_text_input, .colon, .dark_wrapper *, .message, .room-title, .selected > a { color:black !important;}",
+                ".chat_text_input { border: 1px solid black !important; }"
+            ]
+        },
+        {
+            "url": "twitter.com",
+            "invert": [
+                ".tcu-textEllipse--multiline"
+            ]
+        },
+        {
+            "url": "ubi.com",
+            "removebg": "html, body"
+        },
+        {
+            "url": "unityhacks.com",
+            "noinvert": [
+                "#logo *, #taigachat_toolbar *",
+                ".listItemText h3, .pollBlock .pollResult div",
+                ".pollBlock .pollResult h3"
+            ],
+            "invert": [
+                "#unityhacks_sidebar, #exposeMask",
+                "#logoBlock, #navigation, #moderatorBar",
+                ".xenOverlay .sectionMain .heading overlayOnly",
+                ".banner_owner, .banner_staff, .banner_supportleader",
+                ".banner_supporter, .banner_partner, .banner_designer",
+                ".banner_promoter, .banner_honorable, .banner_premium",
+                ".messageHeading, .subHeading, .ToggleTrigger, .prefix",
+                ".PopupOpen, .categoryStrip, .secondaryContent h3, .LTR",
+                ".callToAction, .xenOverlay .section .heading, .xenTooltip",
+                ".redactor_dropdown, .errorOverlay, .sectionHeaders, .button",
+                "[title='Unread messages']",
+                "footer"
+            ]
+        },
+        {
+            "url": "vk.com",
+            "invert": [
+                "#video_player, .mv_playlist, .page_header_cont, .page_album_title"
+            ],
+            "noinvert": [
+                "#video_player *, .mv_playlist *, .page_header_cont *"
+            ],
+            "removebg": [
+                ".mv_layer_bg"
+            ]
+        },
+        {
+            "url": "vocabolario.sns.it",
+            "noinvert": "body[background]",
+            "invert": "img[src]"
+        },
+        {
+            "url": "vuejs.org",
+            "invert": [
+                ".content, pre, h3, p"
+            ],
+            "noinvert": [
+                "img"
+            ]
+        },
+        {
+            "url": "web.whatsapp.com",
+            "invert": ".qrcode .icon-logo",
+            "rules": ".qrcode { border: 8px solid black; }"
+        },
+        {
+            "url": "wikipedia.org",
+            "invert": ".mwe-popups-discreet > svg",
+            "noinvert": [
+                ".mwe-math-fallback-image-inline",
+                ".mwe-math-fallback-image-display"
+            ]
+        },
+        {
+            "url": "wikiwand.com",
+            "removebg": "img"
+        },
+        {
+            "url": "wolfram.com",
+            "noinvert": [
+                ".numberedequation, .displayformula"
+            ]
+        },
+        {
+            "url": "yandex.*",
+            "invert": [
+                ".afisha__content",
+                ".b-ico",
+                ".favicon",
+                ".informers3__icon",
+                ".notifications_type_traffic__icon",
+                ".p1917__item-title",
+                ".p1917__item-type",
+                ".places__content-wrapper",
+                ".schedule__icon",
+                ".stream-intro__content",
+                ".zen__item-domain",
+                ".zen__item-title",
+                "[class*='icon_moon_']"
+            ],
+            "noinvert": [
+                ".afisha__film-image",
+                ".stream-intro__vod-preview"
+            ]
+        },
+        {
+            "url": "youtube.com",
+            "invert": [
+                ".html5-video-player, .has-custom-banner, #theater-background",
+                "#watch-appbar-playlist"
+            ],
+            "noinvert": [
+                ".html5-video-player *",
+                ".has-custom-banner *",
+                "#watch-appbar-playlist *"
+            ],
+            "rules": [
+                "#scrim.app-drawer { background: rgba(255, 255, 255, 0.5); }"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,170 @@
+sudo apt-get update
+sudo apt install zsh
+sudo apt install git
+git config --global user.email "aabccd021@gmail.com"
+git config --global user.name "aabccd021"
+sudo apt install python3-pip
+sudo apt install vim-gnome
+sudo apt install tmux
+
+git clone https://github.com/aabccd021/.dotfiles.git
+#iterate delete all file in dotfiles
+rm .vimrc
+rm .tmux.conf
+rm .bashrc
+
+
+#to switch caps lock and esc install gnome tweak tool
+
+
+#install powerline fonts
+
+#clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
+#copy .vimrc
+
+#set up vim
+##set up vundle (vim lugin manager)
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+##set up base16
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+###
+
+###run this command on vim
+vim -E -c PluginInstall -c q
+
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/.bashrc ~/.bashrc
+ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+
+Bash/ZSH
+
+#Firstly, place the following lines in ~/.bashrc or ~/.zshrc:
+
+#BASE16_SHELL=$HOME/.config/base16-shell/
+#[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+#Next, open a new shell and type base16 followed by a tab to perform tab completion.
+
+base16_classic dark
+tmux
+
+#Firstly, clone the repo and source the scheme file of your choosing:
+
+git clone https://github.com/chriskempson/base16-gnome-terminal.git ~/.config/base16-gnome-terminal
+source ~/.config/base16-gnome-terminal/base16-default.dark.sh
+
+#Next, restart or open Gnome Terminal. Right click on the terminal and select profiles the menu that pops-up. The scheme you just sourced should be available for selection.
+
+vim -E -c TmuxlineSnapshot! ~/.dotfiles/snapshot -c q
+#install chrome
+
+#install jedi
+pipa install jedi
+
+
+#install autopep8
+sudo apt install python-autopep8
+sudo apt install pyflakes
+sudo pip3 install --upgrade autopep8
+sudo pip3 install --upgrade pyflakes
+
+
+#copy .tmux.conf
+
+#install java & android studio
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install java-common oracle-java8-installer
+sudo apt-get install oracle-java8-set-default
+source /etc/profile
+sudo add-apt-repository ppa:maarten-fonville/android-studio
+sudo apt update
+sudo apt install android-studio
+/opt/android-studio/bin/studio.sh
+
+#install blender
+sudo add-apt-repository ppa:thomas-schiex/blender
+sudo apt-get update
+sudo apt-get install blender
+
+#paper theme
+sudo add-apt-repository ppa:snwh/pulp
+sudo apt-get update
+sudo apt-get install paper-gtk-theme paper-icon-theme
+
+#change boot screen
+/usr/share/plymouth/themes/
+
+#
+sudo apt install texlive-latex-base
+
+#flatpack dependencies to install gimp
+sudo add-apt-repository ppa:alexlarsson/flatpak
+
+sudo apt update
+
+sudo apt install flatpak
+
+#gimp
+flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+
+#zeal
+sudo add-apt-repository ppa:zeal-developers/ppa
+sudo apt-get update
+sudo apt-get install zeal
+
+#!!!!!if menu doesn't appear, do sudo apt-get purge appmenu-qt5
+
+
+#ranger
+
+#vlc media player
+sudo apt-get update
+sudo apt-get install vlc browser-plugin-vlc
+
+sudo apt-get install zsh -y
+chsh -s /bin/zsh
+sudo apt-get install curl -y
+#oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
+#To install this theme for use in Oh-My-Zsh, clone this repository into your OMZ custom/themes directory.
+
+ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+#You then need to select this theme in your ~/.zshrc:
+
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+
+#trash cli
+git clone https://github.com/andreafrancia/trash-cli.git
+cd trash-cli
+sudo python setup.py install
+
+
+#    Clone this repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+
+    git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+#    Add the plugin to the list of plugins for Oh My Zsh to load:
+
+    plugins=(zsh-autosuggestions)
+
+#vimrc
+#zshrc
+#tmux
+#i3 status bar
+#i3 config
+#firefox rice
+#texmf latex
+pacman -S w3m
+ranger --copy-config=scope

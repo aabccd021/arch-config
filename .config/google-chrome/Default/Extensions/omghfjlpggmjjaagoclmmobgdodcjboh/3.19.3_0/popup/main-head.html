@@ -1,0 +1,155 @@
+<link rel="import" href="/polymer/polymer.html">
+<link rel="import" href="/popup/head/logo.html">
+<dom-module id="main-head">
+  <template>
+    <style>
+    :host{
+      display: block;
+      height: 56px;
+      line-height: 56px;
+      padding: 0 5px 0 5px;
+      background: #28344f;
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+    :host:after{
+      content:' ';clear:both;display:block;width:0;height:0;overflow:hidden;font-size:0;
+    }
+    :host>.in{
+      overflow: hidden;
+      height: 100%;
+      text-align: right;
+    }
+
+    .GoBack{
+      cursor: pointer;
+      display:inline-block;vertical-align:middle;
+      position:relative;
+      color:#b3becf;
+      font-size:14px;
+      text-decoration: underline;
+      padding: 0 5px 0 18px;
+    }
+    .GoBack:hover{
+      color:white;
+      text-decoration: none;
+    }
+    .GoBack:before{
+      content:'';
+      background: url('/images/icon-back.png') no-repeat 50% 50%;
+      width: 13px;
+      height: 13px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -6px;
+    }
+
+    .LoginGuest{
+      color: #fff;
+      cursor: pointer;
+      text-decoration: underline;
+      display:inline-block;vertical-align:top;
+      padding: 0 5px 0 5px;
+    }
+    .LoginGuest:hover{
+      text-decoration: none;
+    }
+
+    /*.Head_LoginWaiting{
+      display: none;
+      white-space: nowrap;
+    }
+    @keyframes flash{
+      from{
+        background: #292929;
+      }
+      to{
+        background: #CCC;
+      }
+    }
+    .Head_LoginWaiting_Dot{
+      background: #CCC;
+      width: 5px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:5px;
+      border-radius: 12px;
+      margin-right: 0px;
+      display: inline-block;
+      animation-name: flash;
+      animation-iteration-count: infinite;
+      animation-duration: 2000ms;
+      vertical-align: middle;
+    }
+    .Head_LoginWaiting_Dot:first-child{
+      background: #292929;
+    }
+    .Head_LoginWaiting_Dot:nth-child(2){
+      animation-delay: 500ms;
+    }
+    .Head_LoginWaiting_Dot:nth-child(3){
+      animation-delay: 1000ms;
+    }*/
+
+    .Logined{
+      height: 24px;
+      line-height: 24px;
+      width: 100%;
+      display:inline-block;vertical-align:top;
+      vertical-align: middle;
+    }
+    .Logined:after{
+      content:' ';clear:both;display:block;width:0;height:0;overflow:hidden;font-size:0;
+    }
+
+    .Logout{
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      font-size: 26px;
+      color: #b3becf;
+      float: right;
+    }
+    .Logout:hover{
+      color: #fff;
+    }
+
+    .Mail{
+      vertical-align: middle;
+      padding: 0 8px 0 5px;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    </style>
+
+    <head-logo premium="[[user.premium]]"></head-logo>
+    <div class="in">
+      <template is="dom-if" if="[[indexPage]]">
+        <!--<div class="Head_LoginWaiting">
+          <div class="Head_LoginWaiting_Dot">&nbsp;</div>
+          <div class="Head_LoginWaiting_Dot">&nbsp;</div>
+          <div class="Head_LoginWaiting_Dot">&nbsp;</div>
+        </div>-->
+        <template is="dom-if" if="[[!user.email]]">
+          <div class="LoginGuest" on-tap="login">
+            [[translations.signIn]]
+          </div>
+        </template>
+        <template is="dom-if" if="[[user.email]]">
+          <div class="Logined">
+            <div class="Logout b-ico-logout" on-tap="logout" title="[[translations.signOut]]"></div>
+            <div class="Mail" title="[[user.email]]">[[user.email]]</div>
+          </div>
+        </template>
+      </template>
+      <template is="dom-if" if="[[!indexPage]]">
+        <div class="GoBack" on-tap="back">[[translations.goBack]]</div>
+      </template>
+    </div>
+  </template>
+
+  <script src="/popup/main-head.js" type="text/javascript"></script>
+</dom-module>

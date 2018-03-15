@@ -1,0 +1,98 @@
+<link rel="import" href="/polymer/polymer.html">
+<dom-module id="main-block">
+  <template>
+    <style>
+    :host{
+      display: block;
+      height: 100%;
+      min-height: 100%;
+    }
+    </style>
+
+    <div class="Main">
+      <div class="T">
+        <div class="Head">
+          <img src="/images/android_app/logo.png" alt="Browsec" width="191" height="62">
+        </div>
+        <div class="PageName">
+          [[translations.howToUseSmartSettings]]
+        </div>
+      </div>
+
+      <div class="In"><div class="In">
+        <div class="Title">[[translations.iWantTo]]</div>
+        <div class="Section" data-role="section">
+          <div class="Section_Name" data-click="trigger">
+            [[translations.enableForSelectedSites]]
+          </div>
+          <div class="Section_Information"><table><tbody><tr>
+            <td>
+              <div class="Section_Text">
+                <ol>
+                  <li>
+                    [[translations.enableForSelectedSitesDescription1]]
+                  </li>
+                  <li>
+                    [[translations.enableForSelectedSitesDescription2]]
+                  </li>
+                  <li data-role="with image">
+                    [[translations.enableForSelectedSitesDescription3]]
+                  </li>
+                </ol>
+              </div>
+            </td>
+            <td><img src="/images/help/1.gif" width="474" height="526" alt=""></td>
+          </tr></tbody></table></div>
+        </div>
+        <div class="Section" data-role="section">
+          <div class="Section_Name" data-click="trigger">
+            [[translations.enableForAllSitesExcludingSelected]]
+          </div>
+          <div class="Section_Information"><table><tbody><tr>
+            <td>
+              <div class="Section_Text">
+                <ol>
+                  <li>
+                    [[translations.enableForAllSitesExcludingSelectedDescription1]]
+                  </li>
+                  <li>
+                    [[translations.enableForAllSitesExcludingSelectedDescription2]]
+                  </li>
+                  <li data-role="with image">
+                    [[translations.enableForAllSitesExcludingSelectedDescription3]]
+                  </li>
+                </ol>
+              </div>
+            </td>
+            <td><img src="/images/help/2.gif" width="474" height="526" alt=""></td>
+          </tr></tbody></table></div>
+        </div>
+        <div class="Section" data-role="section">
+          <div class="Section_Name" data-click="trigger">
+            [[translations.useDifferentLocationsForDifferentSites]]
+          </div>
+          <div class="Section_Information"><table><tbody><tr>
+            <td>
+              <div class="Section_Text">
+                <ol>
+                  <li>
+                    [[translations.useDifferentLocationsForDifferentSitesDescription1]]
+                  </li>
+                  <li>
+                    [[translations.useDifferentLocationsForDifferentSitesDescription2]]
+                  </li>
+                  <li data-role="with image">
+                    [[translations.useDifferentLocationsForDifferentSitesDescription3]]
+                  </li>
+                </ol>
+              </div>
+            </td>
+            <td><img src="/images/help/3.gif" width="474" height="526" alt=""></td>
+          </tr></tbody></table></div>
+        </div>
+      </div></div>
+    </div>
+  </template>
+
+  <script src="/pages/help/block.js" type="text/javascript"></script>
+</dom-module>

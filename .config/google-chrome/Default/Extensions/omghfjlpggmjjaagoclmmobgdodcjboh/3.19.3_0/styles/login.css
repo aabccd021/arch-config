@@ -1,0 +1,141 @@
+.Login{
+	padding: 38px 12px 2px;
+	font-size: 14px;
+  min-height: 140px;
+	height: 318px;
+	font-size: 11px;
+}
+
+.Login a:hover{
+	text-decoration: none;
+}
+
+.Login_Title{ /* was h1 */
+	font-size: 20px;
+	font-weight: 500;
+	width: 100px;
+	text-align: center;
+  margin: 0 auto;
+	border-bottom: 4px #3d973f solid;
+	padding-bottom: 20px;
+}
+
+.Login_Error,
+.Login_Notice {
+  display: none;
+	position: absolute;
+	top: -24px;
+	width: 100%;
+	left: -2px;
+	font-size: 13px;
+}
+.Login_Notice {
+  color: #090;
+}
+.Login_Error {
+  color: #900;
+}
+
+.Login input[type="text"],
+.Login input[type="password"] {
+	font:100% arial,sans-serif;
+	vertical-align:middle;
+	outline:none;
+	width: 315px;
+	margin: 1px 0px;
+	height: 36px;
+	border-radius: 5px;
+	padding: 1px 10px;
+	font-size: 15px;
+	outline: none;
+	background: #f5f5f5;
+	border: 1px #7b7c80 solid;
+	color: #1c304e;
+}
+.Login input[type="text"]::-webkit-input-placeholder,
+.Login input[type="password"]::-webkit-input-placeholder {
+	color: #9b9c9e;
+}
+.Login input[type="text"]::-ms-input-placeholder,
+.Login input[type="password"]::-ms-input-placeholder {
+	color: #9b9c9e;
+}
+.Login input[type="text"]::placeholder,
+.Login input[type="password"]::placeholder {
+	color: #9b9c9e;
+}
+.Login input[type="text"].invalid,
+.Login input[type="password"].invalid{
+  border: 1px solid #900;
+}
+.Login input[type="text"].invalid:focus,
+.Login input[type="password"].invalid:focus{
+  outline: none;
+}
+
+.Login_Form{
+  margin:0;
+  padding:0;
+  border-style:none;
+  margin-top: 46px;
+  text-align: center;
+  padding: 0 20px;
+  position:relative
+}
+
+
+.Login_Row{
+	width:100%;
+	padding: 0 0 14px;
+}
+.Login_Row:after{
+	display:block;
+	clear:both;
+	content:'';
+}
+.Login_Row label{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  min-width: 100px;
+	padding: 6px 5px 0 0;
+}
+
+.Login_ForgotPassword {
+  color: #1c304e;
+  font-size: 12px;
+  line-height: 1;
+  margin-top: 3px;
+  float: right;
+}
+
+.Login_Button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  border: 0;
+  border-radius: 5px;
+  position:relative;
+  background-color: #1c304e;
+  color:#fff;
+  text-align:center;
+  text-decoration:none;
+  font-family: inherit;
+  font-weight: 400;
+  padding: 2px 12px;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 18px;
+  height: 45px;
+  cursor:pointer;
+  margin-left: 6px;
+  width: 190px;
+}
+
+.Login_Register {
+	margin-top: 7px;
+	font-size: 12px;
+}
+.Login_Register a {
+	color: #1c304e;
+}

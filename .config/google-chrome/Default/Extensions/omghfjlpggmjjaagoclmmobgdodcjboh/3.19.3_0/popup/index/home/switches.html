@@ -1,0 +1,86 @@
+<link rel="import" href="/polymer/polymer.html">
+<dom-module id="index-home-switches">
+  <template>
+    <style>
+    :host{
+      display: block;
+    }
+    .Row:after{
+      content:' ';clear:both;display:block;width:0;height:0;overflow:hidden;font-size:0;
+    }
+    .Row + .Row{
+      padding-top: 8px;
+    }
+
+    .Switch,
+    .Flag_Out{
+      float: right;
+      width: 61px;
+      padding-left: 11px;
+      min-height: 1px;
+    }
+
+    .Name{
+      white-space: nowrap;
+      overflow: hidden;
+      line-height: 26px;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+    }
+
+    .Flag{
+      border: 1px solid #bcbcbc;
+      border-radius: 3px;
+      padding: 2px 27px 2px 2px;
+      cursor: pointer;
+      position: relative;
+    }
+    .Flag:hover{
+      border-color: #888;
+    }
+    .Flag:after{
+      content: '';
+      display: block;
+      background: url('/images/flag_arrow_right.png') 0 0 no-repeat;
+      width: 5px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:9px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -4px;
+    }
+    .Flag img{
+      display: block;
+    }
+    </style>
+
+    <div class="Row">
+      <div class="Switch">
+        <c-switch on="[[view.on]]" on-tap="domainProxySwitch"></c-switch>
+      </div>
+      <div class="Flag_Out">
+        <template is="dom-if" if="[[view.country]]">
+          <div class="Flag" on-tap="domainCountryChange">
+            <img src$="[[flagUrl(view.country)]]" width="30" height="20" alt$="[[view.country]]">
+          </div>
+        </template>
+      </div>
+      <div class="Name">[[view.view]]</div>
+    </div>
+
+    <div class="Row">
+      <div class="Switch">
+        <c-switch on="[[proxyEnabled]]" on-tap="proxySwitch"></c-switch>
+      </div>
+      <div class="Flag_Out">
+        <template is="dom-if" if="[[proxyEnabled]]">
+          <div class="Flag" on-tap="countryChange">
+            <img src$="[[flagUrl(proxyCountry)]]" width="30" height="20" alt$="[[proxyCountry]]">
+          </div>
+        </template>
+      </div>
+      <div class="Name">[[translations.otherWebsites]]</div>
+    </div>
+  </template>
+  <script src="/popup/index/home/switches.js" type="text/javascript"></script>
+</dom-module>

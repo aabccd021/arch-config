@@ -1,0 +1,18 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "description": "Minimalist new tab clock, with customizable background.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgk6blDEwpyM0OLAJjKBApv4uWgDEmYSdeGqXet52PUoqE36kKW+Mm/Paei8BNEWM5h1yADUkPNGs1uBICu4H6ZuM4RvB+4NKRWu51h6ZTNyX2Qreq8b6uu83cGOy23UzQ/CichZ0ALFBzMldiXjlJhT4IMgcWncPblDmDlO3DvhjOqvTTuz2hUdZQuJ18EwFNNiMMNY/37do8z3M+5gA9ZaTdHXzey6LnyILX2DnCW+LNhJHT0j8cH2W0iCxRma+AJRx+c3rkzi1jA37ZeTrxXJmeDsV72W7+HcLypN9CQW3w4RJnLWD4c0NV9WTY0ZlQ4q8swSYwumnGIW6j7n6eQIDAQAB",
+   "manifest_version": 2,
+   "name": "Time Tab",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3"
+}

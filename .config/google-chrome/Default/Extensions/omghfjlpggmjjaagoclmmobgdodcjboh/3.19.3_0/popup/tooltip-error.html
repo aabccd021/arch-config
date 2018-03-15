@@ -1,0 +1,79 @@
+<link rel="import" href="/polymer/polymer.html">
+<dom-module id="tooltip-error">
+  <template>
+    <style>
+    :host{
+      display: block;
+      position: absolute;
+    }
+    :host > .Shadow{
+      position: absolute;
+      top:-10px;right:-14px;bottom:-18px;left:-14px;
+      font-size: 0;
+      background:
+        url('/images/tooltip-error/shadow_v.png') -14px 24px no-repeat,
+        url('/images/tooltip-error/shadow_v.png') calc(100% + 14px) 24px no-repeat;
+      background-size: 28px calc(100% - 54px), 28px calc(100% - 54px);
+    }
+    :host > .Shadow:before,
+    :host > .Shadow:after{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+    :host > .Shadow:before{
+      top: 0;
+      background:
+        url('/images/tooltip-error/shadow_h.png') 0 0 no-repeat,
+        url('/images/tooltip-error/shadow_h.png') 100% -24px no-repeat,
+        url('/images/tooltip-error/shadow_h.png') 30px -48px no-repeat;
+      background-size: auto, auto, calc(100% - 60px) 162px;
+      overflow:hidden;text-indent:-9999px;height:0;padding-top:24px;
+    }
+    :host > .Shadow:after{
+      bottom: 0;
+      background:
+        url('/images/tooltip-error/shadow_h.png') 0 -72px no-repeat,
+        url('/images/tooltip-error/shadow_h.png') 100% -102px no-repeat,
+        url('/images/tooltip-error/shadow_h.png') 30px -132px no-repeat;
+      background-size: auto, auto, calc(100% - 60px) 162px;
+      overflow:hidden;text-indent:-9999px;height:0;padding-top:30px;
+    }
+    :host > .Bg{
+      position: absolute;
+      top:0px;right:0px;bottom:0px;left:0px;
+      background: #faf5f5;
+      border-radius: 4px;
+      border: 1px solid #8e3c33;
+      font-size: 0;
+    }
+    :host > .Bg:after{
+      content: '';
+      display: block;
+      background: url('/images/tooltip-error/bg_corner.png') 0 0 no-repeat;
+      width: 10px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:6px;
+      position: absolute;
+      left: 16px;
+      top: -6px;
+    }
+    :host > .In{
+      position: relative;
+      color: #994136;
+      font-size: 12px;
+      padding: 4px 11px;
+      line-height: 19px;
+      min-height: 19px; /* NOTE border in .Bg */
+      min-width: 12px;
+    }
+    </style>
+
+    <div class="Shadow"></div>
+    <div class="Bg"></div>
+    <div class="In">[[text]]</div>
+  </template>
+
+  <script src="/popup/tooltip-error.js" type="text/javascript"></script>
+</dom-module>

@@ -1,0 +1,82 @@
+<link rel="import" href="/polymer/polymer.html">
+<link rel="import" href="/popup/index/locations/element.html">
+<dom-module id="index-locations">
+  <template>
+    <style>
+    .Head{
+    	background: #e5ebef;
+    	padding: 10px;
+    	-webkit-box-sizing: border-box;
+    	        box-sizing: border-box;
+    	text-align: center;
+    	border-bottom: 1px solid #bcbcbc;
+    }
+    .Head_Title{
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    .Head_Description{
+    	padding-top: 5px;
+    }
+
+    .Sections{
+    	position: absolute;
+    	top:0px;
+    	bottom:0px;
+    	left:0px;
+    	width: 100%;
+    	overflow: auto;
+    }
+    .Sections>.in{
+    	padding: 5px 5px 10px;
+    }
+    .Section ~ .Section{
+    	padding-top: 10px;
+    }
+
+    .Section_List{
+      border: 1px solid #bcbcbc;
+      border-radius: 4px;
+    }
+    .Section_Caption{
+      padding: 0 20px 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    index-locations-element + index-locations-element{
+      border-top: 1px solid #bcbcbc;
+    }
+    </style>
+
+    <div class="Head">
+      <div class="Head_Title">[[translations.changeLocation]]</div>
+      <div class="Head_Description">
+        [[translations.chooseYourVirtualLocation]]
+      </div>
+    </div>
+    <div class="Sections"><div class="in">
+      <template is="dom-if" if="[[!premiumUser]]">
+        <div class="Section free">
+          <h3 class="Section_Caption">[[translations.freeServers]]</h3>
+          <div class="Section_List">
+            <template is="dom-repeat" items="[[countries.free]]">
+              <index-locations-element on-countryclick="countryClick" data="[[item]]" premium-user="[[premiumUser]]" country="[[country]]">
+              </index-locations-element>
+            </template>
+          </div>
+        </div>
+      </template>
+      <div class="Section premium">
+        <h3 class="Section_Caption">[[translations.premiumServers]]</h3>
+        <div class="Section_List">
+          <template is="dom-repeat" items="[[countries.premium]]">
+            <index-locations-element on-countryclick="countryClick" data="[[item]]" premium-user="[[premiumUser]]" country="[[country]]" premium="">
+            </index-locations-element>
+          </template>
+        </div>
+      </div>
+    </div></div>
+  </template>
+  <script src="/popup/index/locations.js" type="text/javascript"></script>
+</dom-module>

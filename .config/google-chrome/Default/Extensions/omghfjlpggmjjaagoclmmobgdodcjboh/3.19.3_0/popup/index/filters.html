@@ -1,0 +1,285 @@
+<link rel="import" href="/polymer/polymer.html">
+<link rel="import" href="/popup/index/filters/domain.html">
+<dom-module id="index-filters">
+  <template>
+    <style>
+    .Off{
+      width: 30px;
+      line-height: 20px;
+      color: #994136;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .ChangeRule{
+      padding: 19px 14px;
+      border-bottom: 1px solid #bcbcbc;
+    }
+    .ChangeRule>table{
+      width: 100%;
+    }
+    .ChangeRule>table>tbody>tr>td~td{
+      padding-left: 10px;
+    }
+    .ChangeRule>table>tbody>tr>td:nth-child(2){
+      width: 5000px;
+    }
+
+    .ChangeRule_Country{
+      position: relative;
+      width: 56px;
+      border: 1px solid #bcbcbc;
+      height: 20px;
+      border-radius: 4px;
+      padding: 2px 2px;
+    }
+    .ChangeRule_Country:after{
+      content: '';
+      display: block;
+      background: url('/images/filters/country.png') 0 -100px no-repeat;
+      width: 9px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:5px;
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      margin-top: -2px;
+    }
+    .ChangeRule_Country.open{
+      border-color: #3b9946;
+    }
+    .ChangeRule_Country.open:after{
+      background-position: 0 0;
+      margin-top: -3px;
+    }
+
+    .ChangeRule_Button{
+      width: 46px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:24px;
+      background: #3b9946;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+    }
+    .ChangeRule_Button:after{
+      content: '';
+      display: block;
+      width: 14px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:14px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -7px 0 0 -7px;
+      background: url('/images/filters/button_icons.png') 0 0 no-repeat;
+    }
+    .ChangeRule_Button.save:after{
+      width: 16px;
+      padding-top: 11px;
+      background-position: 0 -100px;
+      margin: -5px 0 0 -8px;
+    }
+
+    .List{
+      position: absolute;
+      top:65px;right:0px;bottom:0px;left:0px;
+      overflow: auto;
+    }
+    .List > .E{
+      position: relative;
+      line-height: 34px;
+      -webkit-transition: opacity 0.2s;
+      -o-transition: opacity 0.2s;
+      transition: opacity 0.2s;
+    }
+    .List > .E:hover{
+      background: #fafafa;
+    }
+    .List > .E.active,
+    .List > .E.active:hover{
+      background: #f5f5f5;
+    }
+    .List > .E.inactive,
+    .List > .E.inactive:hover{
+      background: transparent;
+      opacity: 0.33;
+    }
+    .List > .E.inactive.disabled,
+    .List > .E.inactive.disabled:hover{
+      background: transparent;
+      opacity: 1;
+    }
+    .List > .E>.In{
+      padding: 0 7px 0 14px;
+      cursor: pointer;
+      height: 34px;
+    }
+    .List > .E>.In:after{
+      content:' ';clear:both;display:block;width:0;height:0;overflow:hidden;font-size:0;
+    }
+
+    .List_Remove{
+      float: right;
+      background: url('/images/filters/trash.png') 0 0 no-repeat;
+      width: 11px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:14px;
+      margin: 3px 0 0 6px;
+      cursor: pointer;
+      border: 7px solid transparent;
+    }
+    .List_Remove:hover{
+      background-position: 0 -100px;
+    }
+    .List_Flag{
+      float: right;
+      width: 30px;
+      padding: 7px 0 0 13px;
+    }
+    .List_Flag img{
+      display: block;
+    }
+
+    .List_Select{
+      float: right;
+      padding: 4px 0 0 5px;
+    }
+    .List_Select_Button{
+      line-height: 24px;
+      white-space: nowrap;
+      cursor: pointer;
+      border: 1px solid #3b9946;
+      color: #3b9946;
+      padding: 0 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .List_Select_Button:hover{
+      background: #3b9946;
+      color: #fff;
+    }
+
+    .List_Favicon{
+      width: 16px;
+      float: left;
+      padding: 9px 7px 0 0;
+      -webkit-transition: opacity 0.2s;
+      -o-transition: opacity 0.2s;
+      transition: opacity 0.2s;
+    }
+    .List > .E.disabled .List_Favicon{
+      opacity: 0.3;
+    }
+    .List_Favicon img{
+      display: block;
+    }
+    .List_Name{
+      overflow: hidden;
+      white-space: nowrap;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      -webkit-transition: opacity 0.2s;
+      -o-transition: opacity 0.2s;
+      transition: opacity 0.2s;
+    }
+    .List > .E.disabled .List_Name{
+      opacity: 0.3;
+    }
+    .List_Deleted{
+      display: none;
+      background: #fff;
+      position: absolute;
+      top:0px;right:0px;bottom:0px;left:0px;
+      padding: 0 14px 0 22px;
+      border-left: 14px solid transparent;
+      color: #3b9946;
+    }
+    .List_Deleted:after{
+      content: '';
+      width: 12px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:12px;
+      background: url('/images/filters/check.png') 0 0 no-repeat;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -6px;
+    }
+    .List > .E.deleted .List_Deleted{
+      display: block;
+    }
+    .List_Delete_Link{
+      cursor: pointer;
+      color: #28344f;
+      border-bottom: 1px dashed #28344f;
+    }
+    .List_Delete_Link:hover{
+      border-bottom-color: transparent;
+    }
+
+    .List_InactiveOverlay{
+      display: none;
+      position: absolute;
+      top:0px;right:0px;bottom:0px;left:0px;
+      overflow: hidden;
+      text-indent: -9999px;
+    }
+    .List > .E.inactive .List_InactiveOverlay{
+      display: block;
+    }
+    </style>
+
+    <div class="ChangeRule"><table><tbody><tr>
+      <td>[[translations.on]]</td>
+      <td>
+        <filters-domain value="{{domain}}" on-save="save"></filters-domain>
+      </td>
+      <td>[[translations.use]]</td>
+      <td><div class="ChangeRule_Country" on-tap="openCountryList">
+        <template is="dom-if" if="[[country]]" restamp="true">
+          <img src$="[[computeVisibleCountry(country, countries)]]" width="30" height="20" alt="">
+        </template>
+        <template is="dom-if" if="[[!country]]" restamp="true">
+          <div class="Off">[[translations.off]]</div>
+        </template>
+      </div></td>
+      <td>
+        <div class$="ChangeRule_Button [[classButton(selectedDomain)]]" on-tap="save"></div>
+      </td>
+    </tr></tbody></table></div>
+
+    <div class="List" on-tap="listClick">
+      <template is="dom-repeat" items="[[filters]]">
+        <div class$="E [[classElement(item, selectedDomain)]]">
+          <div class="In" on-tap="listElementClick">
+            <div class="List_Remove" title="[[translations.removeSmartSetting]]"></div>
+            <template is="dom-if" if="[[!item.disabled]]">
+              <div class="List_Flag">
+                <template is="dom-if" if="[[item.country]]">
+                  <img src$="[[computeVisibleCountry(item.country, countries)]]" width="30" height="20" alt="">
+                </template>
+                <template is="dom-if" if="[[!item.country]]">
+                  <div class="Off">[[translations.off]]</div>
+                </template>
+              </div>
+            </template>
+            <template is="dom-if" if="[[item.disabled]]">
+              <div class="List_Select">
+                <div class="List_Select_Button">[[translations.select]]</div>
+              </div>
+            </template>
+            <div class="List_Favicon">
+              <img src$="[[domainIcon(item.domain)]]" width="16" height="16" alt="">
+            </div>
+            <div class="List_Name">[[item.view]]</div>
+          </div>
+          <div class="List_Deleted">
+            [[translations.settingWasDeleted]]
+            <span class="List_Delete_Link" on-tap="cancelRemove">
+              [[translations.undo]]
+            </span>
+          </div>
+          <div class="List_InactiveOverlay" on-tap="resetSelection">&nbsp;</div>
+        </div>
+      </template>
+    </div>
+  </template>
+
+  <script src="/popup/index/filters.js" type="text/javascript"></script>
+</dom-module>

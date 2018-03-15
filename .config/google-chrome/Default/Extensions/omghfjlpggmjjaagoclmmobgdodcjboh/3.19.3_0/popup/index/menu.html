@@ -1,0 +1,103 @@
+<divnk rel="import" href="/polymer/polymer.html">
+<dom-module id="index-menu">
+  <template>
+    <style>
+    a:link,
+    a:visited{
+    	text-decoration: none;
+    	cursor: pointer;
+    	color: #7a7c7f;
+    }
+    a:hover{
+    	text-decoration: none;
+    	color: #3b9946;
+    }
+
+    :host{
+    	display: block;
+    	overflow: hidden;
+    	padding-top: 12px;
+    }
+    :host > .E{
+    	display:inline-block;vertical-align:top;
+    	position: relative;
+    	color: #7a7c7f;
+      cursor: pointer;
+      font-size: 12px;
+    	line-height: 18px;
+      margin: 0 0 0 17px;
+    	padding: 0 0 0 16px;
+    }
+    :host > .E:hover{
+    	color: #3b9946;
+    }
+    :host > .E:first-child{
+      margin-left: 0;
+    }
+    :host > .E.selected{
+    	color: #3b9946;
+    	cursor: default;
+    }
+    :host > .E:before{
+    	font-size: 14px;
+    	display: block;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	line-height: 18px;
+    }
+    :host > .E.iconSmartSettings{
+      padding-left: 0;
+      position: relative;
+      padding-right: 21px;
+    }
+    :host > .E.iconSmartSettings:before{
+      content: '';
+      display:inline-block;vertical-align:middle;
+      background: url('/images/menu_icons.png') 0 0 no-repeat;
+      width: 14px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:14px;
+      position: static;
+      margin-top: -4px;
+      padding-right: 3px;
+    }
+    :host > .E.iconSmartSettings:after{
+      content: '';
+      display: block;
+      background: url('/images/beta.png') 0 0 no-repeat;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -16px;
+      width: 18px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:18px;
+    }
+    :host > .E.iconSmartSettings.selected:before,
+    :host > .E.iconSmartSettings:hover:before{
+      background-position: 0 -50px;
+    }
+    </style>
+
+    <div class$="E b-ico-home [[iconConditionClass(homePage)]]" on-tap="goHome">
+      [[translations.home]]
+    </div>
+    <div class$="E iconSmartSettings [[iconConditionClass(filtersPage)]]" on-tap="openSettings" on-contextmenu="openSettings">
+      [[translations.smartSettings]]
+    </div>
+    <!--
+    <div class$="E b-ico-location [[iconConditionClass(locationsPage)]]" on-tap="goLocations">
+      [[translations.changeLocation]]
+    </div>
+    <div class="e b-ico-location" data-click="page switch" data-target="index.settings">
+      [[translations.settings]]
+    </div>
+    -->
+    <div class="E b-ico-support">
+      <a href$="[[contactUsUrl]]" target="_blank">
+        [[translations.contactUs]]
+      </a>
+    </div>
+  </template>
+  <script type="text/javascript" src="/popup/index/menu.js"></script>
+</dom-module>
+</divnk>

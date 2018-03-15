@@ -1,0 +1,209 @@
+.Promos{
+	height:82px;
+	display: none;
+}
+.Promos.stVisible{
+	display: block;
+}
+.Promos>.e{
+	display: none;
+}
+.Promos>.e.stVisible{
+	display: block;
+}
+
+.Promos_Element{
+	position: relative;
+}
+.Promos_Element_Link{
+	display: block;
+	position: absolute;
+	top:0px;right:0px;bottom:0px;left:0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-indent: -9999px;
+	font-size: 0;
+}
+
+.Promos_Speed{
+	background: #c0392b;
+	margin: 6px 6px 0 6px;
+	border-radius: 4px;
+	height: 82px;
+	color: #fff;
+	text-align: center;
+	line-height: 1;
+}
+.Promos_Speed > .in{
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.Promos_Speed > .in > .in{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 7px;
+}
+.Promos_Speed_Title{
+	text-transform: uppercase;
+	font-size: 23px;
+	font-weight: bold;
+}
+.Promos_Speed_Price{
+	color: #f1c40f;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 3px 0 7px;
+}
+.Promos_Speed_Days{
+	color: #e1afab;
+	font-size: 12px;
+}
+
+.Promos_PremiumUpgrade{
+	position: relative;
+	background: #e5ebef;
+	padding: 0 10px 0 80px;
+	height: 82px;
+  margin: 6px 5px 0 5px;
+  border-radius: 4px;
+  color: white;
+}
+.Promos_PremiumUpgrade:after{
+	content: "";
+	display: block;
+	width: 67px;
+	overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:67px;
+	position: absolute;
+	top: 50%;
+	margin-top: -33px;
+	left: 3px;
+}
+.Promos_PremiumUpgrade>.in{
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.Promos_PremiumUpgrade>.in>.in{
+	display: table-cell;
+	vertical-align: middle;
+}
+.Promos_PremiumUpgrade.stServers:after{
+	background: url("../images/advantages.png") 0 -134px no-repeat;
+}
+.Promos_PremiumUpgrade.stSpeed:after{
+	background: url("../images/advantages.png") 0 -67px no-repeat;
+}
+.Promos_PremiumUpgrade.stLocations:after{
+	background: url("../images/advantages.png") 0 0 no-repeat;
+}
+.Promos_PremiumUpgrade_Title{
+  font-size: 16px;
+  color: #3d9740;
+  font-weight: 600;
+}
+.Promos_PremiumUpgrade_Text{
+	color:#28344f;
+	font-size:15px;
+	margin-top: 2px;
+	font-weight: 500;
+}
+
+.Promos_FreeTrial{
+	height: 82px;
+	margin: 6px 5px 0 5px;
+	border-radius: 4px;
+	background: #e5ebef;
+	position: relative;
+	padding-left: 83px;
+}
+.Promos_FreeTrial:before{
+  content: "";
+	display: block;
+	overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:48px;
+  width: 50px;
+  background: url("../images/bc98-banner_Free.png") 0 0 no-repeat;
+	position: absolute;
+	top: 50%;
+	margin-top: -24px;
+	left: 33px;
+}
+.Promos_FreeTrial>.in{
+	display: table;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.Promos_FreeTrial>.in>.in{
+	display: table-cell;
+	vertical-align: middle;
+}
+.Promos_FreeTrial_Title{
+	font-size: 16px;
+  color: #3d9740;
+  font-weight: 600;
+}
+.Promos_FreeTrial_Button{
+	display:inline-block;vertical-align:top;
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  background: #3d973f;
+  margin: 9px 0 0;
+  font-size: 14px;
+  padding: 0 45px;
+  font-weight: bold;
+}
+.Promos_FreeTrial_Button:link,
+.Promos_FreeTrial_Button:visited{
+	text-decoration: none;
+}
+
+.Promos_Expire{
+  margin: 1px 0 0;
+  background: #fcd0cb;
+  border-bottom: 1px #994136 solid;
+  padding: 10px 10px 10px;
+}
+.Promos_Expire_Close{
+	position: absolute;
+	font-size: 32px;
+	top: -5px;
+	right: -1px;
+	color: #994136;
+}
+.Promos_Expire_Close:hover{
+  color: #fff;
+}
+
+.Promos_Expire_Title{
+	color: #994136;
+	font-size: 14px;
+	text-align: center;
+}
+.Promos_Expire_Description{
+  color: #1c304e;
+  font-size: 12px;
+	text-align: center;
+}
+
+.Promos_Expire_Link_Out{
+	text-align: center;
+	font-size: 12px;
+	padding-top: 5px;
+}
+.Promos_Expire_Link{
+	display:inline-block;vertical-align:top;
+	cursor:pointer;
+}
+.Promos_Expire_Link:link,
+.Promos_Expire_Link:visited{
+	text-decoration: none;
+	border-bottom:1px #1c304e solid;
+	color: #1c304e;
+}
+.Promos_Expire_Link:hover{
+	color: #fff;
+	border-bottom:1px solid #fff;
+}

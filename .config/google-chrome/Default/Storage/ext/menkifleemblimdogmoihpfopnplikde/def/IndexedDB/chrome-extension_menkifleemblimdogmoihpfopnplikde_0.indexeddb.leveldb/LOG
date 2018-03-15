@@ -1,0 +1,130 @@
+2018/02/02-13:32:44.344 2104 Reusing MANIFEST /home/aabccd021/.config/google-chrome/Default/Storage/ext/menkifleemblimdogmoihpfopnplikde/def/IndexedDB/chrome-extension_menkifleemblimdogmoihpfopnplikde_0.indexeddb.leveldb/MANIFEST-000001
+2018/02/02-13:32:44.344 2104 Recovering log #52
+2018/02/02-13:32:44.394 2104 Reusing old log /home/aabccd021/.config/google-chrome/Default/Storage/ext/menkifleemblimdogmoihpfopnplikde/def/IndexedDB/chrome-extension_menkifleemblimdogmoihpfopnplikde_0.indexeddb.leveldb/000052.log 
+2018/02/02-13:34:11.247 2895 Level-0 table #61: started
+2018/02/02-13:34:11.456 2895 Level-0 table #61: 2642253 bytes OK
+2018/02/02-13:34:11.590 2895 Delete type=0 #52
+2018/02/02-13:34:14.189 2895 Compacting 1@1 + 5@2 files
+2018/02/02-13:34:14.429 2895 Generated table #62@1: 7804 keys, 2200825 bytes
+2018/02/02-13:34:14.827 2895 Generated table #63@1: 9872 keys, 2166383 bytes
+2018/02/02-13:34:15.316 2895 Generated table #64@1: 42516 keys, 2193441 bytes
+2018/02/02-13:34:15.882 2895 Generated table #65@1: 12316 keys, 2208307 bytes
+2018/02/02-13:34:16.129 2895 Generated table #66@1: 6591 keys, 1147944 bytes
+2018/02/02-13:34:16.129 2895 Compacted 1@1 + 5@2 files => 9916900 bytes
+2018/02/02-13:34:16.273 2895 compacted to: files[ 0 0 5 0 0 0 0 ]
+2018/02/02-13:35:17.887 2895 Level-0 table #68: started
+2018/02/02-13:35:18.145 2895 Level-0 table #68: 1777760 bytes OK
+2018/02/02-13:35:18.344 2895 Delete type=0 #60
+2018/02/02-13:35:18.347 2895 Delete type=2 #54
+2018/02/02-13:35:18.347 2895 Delete type=2 #61
+2018/02/02-13:35:18.352 2895 Delete type=2 #55
+2018/02/02-13:35:18.353 2895 Delete type=2 #56
+2018/02/02-13:35:18.354 2895 Delete type=2 #57
+2018/02/02-13:35:18.355 2895 Delete type=2 #58
+2018/02/02-13:35:20.692 2895 Compacting 1@1 + 5@2 files
+2018/02/02-13:35:20.910 2895 Generated table #69@1: 7802 keys, 2201032 bytes
+2018/02/02-13:35:21.134 2895 Generated table #70@1: 9863 keys, 2167160 bytes
+2018/02/02-13:35:21.611 2895 Generated table #71@1: 32903 keys, 2169713 bytes
+2018/02/02-13:35:21.855 2895 Generated table #72@1: 27835 keys, 2215505 bytes
+2018/02/02-13:35:22.091 2895 Generated table #73@1: 14021 keys, 2092431 bytes
+2018/02/02-13:35:22.091 2895 Compacted 1@1 + 5@2 files => 10845841 bytes
+2018/02/02-13:35:22.243 2895 compacted to: files[ 0 0 5 0 0 0 0 ]
+2018/02/02-13:35:22.243 2895 Delete type=2 #62
+2018/02/02-13:35:22.245 2895 Delete type=2 #63
+2018/02/02-13:35:22.247 2895 Delete type=2 #64
+2018/02/02-13:35:22.248 2895 Delete type=2 #65
+2018/02/02-13:35:22.250 2895 Delete type=2 #66
+2018/02/02-13:35:22.251 2895 Delete type=2 #68
+2018/02/02-13:37:36.115 2895 Level-0 table #75: started
+2018/02/02-13:37:36.376 2895 Level-0 table #75: 1577853 bytes OK
+2018/02/02-13:37:36.432 2895 Delete type=0 #67
+2018/02/02-13:37:37.603 2895 Compacting 1@1 + 5@2 files
+2018/02/02-13:37:37.812 2895 Generated table #76@1: 7554 keys, 2198648 bytes
+2018/02/02-13:37:38.078 2895 Generated table #77@1: 9136 keys, 2164456 bytes
+2018/02/02-13:37:38.467 2895 Generated table #78@1: 53501 keys, 2200729 bytes
+2018/02/02-13:37:38.748 2895 Generated table #79@1: 11527 keys, 2201038 bytes
+2018/02/02-13:37:38.948 2895 Generated table #80@1: 8353 keys, 1411744 bytes
+2018/02/02-13:37:38.948 2895 Compacted 1@1 + 5@2 files => 10176615 bytes
+2018/02/02-13:37:39.100 2895 compacted to: files[ 0 0 5 0 0 0 0 ]
+2018/02/02-13:37:52.418 2895 Level-0 table #82: started
+2018/02/02-13:37:52.599 2895 Level-0 table #82: 1301454 bytes OK
+2018/02/02-13:37:52.750 2895 Delete type=2 #69
+2018/02/02-13:37:52.756 2895 Delete type=2 #70
+2018/02/02-13:37:52.758 2895 Delete type=0 #74
+2018/02/02-13:37:52.765 2895 Delete type=2 #71
+2018/02/02-13:37:52.766 2895 Delete type=2 #75
+2018/02/02-13:37:52.768 2895 Delete type=2 #72
+2018/02/02-13:37:52.780 2895 Delete type=2 #73
+2018/02/02-13:37:53.405 2895 Compacting 1@1 + 5@2 files
+2018/02/02-13:37:53.629 2895 Generated table #83@1: 7616 keys, 2200855 bytes
+2018/02/02-13:37:53.898 2895 Generated table #84@1: 9097 keys, 2165244 bytes
+2018/02/02-13:37:54.175 2895 Generated table #85@1: 38369 keys, 2176040 bytes
+2018/02/02-13:37:54.459 2895 Generated table #86@1: 36851 keys, 2219412 bytes
+2018/02/02-13:37:54.821 2895 Generated table #87@1: 14597 keys, 2224461 bytes
+2018/02/02-13:37:54.977 2895 Generated table #88@1: 746 keys, 155209 bytes
+2018/02/02-13:37:54.978 2895 Compacted 1@1 + 5@2 files => 11141221 bytes
+2018/02/02-13:37:55.154 2895 compacted to: files[ 0 0 6 0 0 0 0 ]
+2018/02/02-13:37:55.154 2895 Delete type=2 #76
+2018/02/02-13:37:55.156 2895 Delete type=2 #77
+2018/02/02-13:37:55.158 2895 Delete type=2 #78
+2018/02/02-13:37:55.161 2895 Delete type=2 #79
+2018/02/02-13:37:55.162 2895 Delete type=2 #80
+2018/02/02-13:37:55.163 2895 Delete type=2 #82
+2018/02/02-13:38:15.111 2895 Level-0 table #90: started
+2018/02/02-13:38:15.261 2895 Level-0 table #90: 1224598 bytes OK
+2018/02/02-13:38:15.349 2895 Delete type=0 #81
+2018/02/02-13:38:21.616 2895 Compacting 1@1 + 6@2 files
+2018/02/02-13:38:21.864 2895 Generated table #91@1: 7544 keys, 2198801 bytes
+2018/02/02-13:38:22.072 2895 Generated table #92@1: 9142 keys, 2164992 bytes
+2018/02/02-13:38:22.300 2895 Generated table #93@1: 7453 keys, 2138893 bytes
+2018/02/02-13:38:22.619 2895 Generated table #94@1: 81484 keys, 2242646 bytes
+2018/02/02-13:38:22.857 2895 Generated table #95@1: 12161 keys, 2205408 bytes
+2018/02/02-13:38:23.065 2895 Generated table #96@1: 7147 keys, 1250071 bytes
+2018/02/02-13:38:23.065 2895 Compacted 1@1 + 6@2 files => 12200811 bytes
+2018/02/02-13:38:23.242 2895 compacted to: files[ 0 0 6 0 0 0 0 ]
+2018/02/02-13:38:23.243 2895 Delete type=2 #83
+2018/02/02-13:38:23.245 2895 Delete type=2 #84
+2018/02/02-13:38:23.246 2895 Delete type=2 #85
+2018/02/02-13:38:23.248 2895 Delete type=2 #86
+2018/02/02-13:38:23.250 2895 Delete type=2 #87
+2018/02/02-13:38:23.252 2895 Delete type=2 #88
+2018/02/02-13:38:23.252 2895 Delete type=2 #90
+2018/02/02-13:38:49.356 2895 Level-0 table #98: started
+2018/02/02-13:38:49.586 2895 Level-0 table #98: 1430263 bytes OK
+2018/02/02-13:38:49.763 2895 Delete type=0 #89
+2018/02/02-13:38:54.851 2895 Compacting 1@1 + 6@2 files
+2018/02/02-13:38:55.101 2895 Generated table #99@1: 7662 keys, 2201667 bytes
+2018/02/02-13:38:55.368 2895 Generated table #100@1: 9081 keys, 2163439 bytes
+2018/02/02-13:38:55.599 2895 Generated table #101@1: 7461 keys, 2139677 bytes
+2018/02/02-13:38:55.868 2895 Generated table #102@1: 71287 keys, 2218158 bytes
+2018/02/02-13:38:56.134 2895 Generated table #103@1: 30258 keys, 2215684 bytes
+2018/02/02-13:38:56.414 2895 Generated table #104@1: 14703 keys, 2200463 bytes
+2018/02/02-13:38:56.414 2895 Compacted 1@1 + 6@2 files => 13139088 bytes
+2018/02/02-13:38:56.536 2895 compacted to: files[ 0 0 6 0 0 0 0 ]
+2018/02/02-13:38:56.536 2895 Delete type=2 #98
+2018/02/02-13:38:56.537 2895 Delete type=2 #91
+2018/02/02-13:38:56.539 2895 Delete type=2 #92
+2018/02/02-13:38:56.540 2895 Delete type=2 #93
+2018/02/02-13:38:56.541 2895 Delete type=2 #94
+2018/02/02-13:38:56.556 2895 Delete type=2 #95
+2018/02/02-13:38:56.563 2895 Delete type=2 #96
+2018/02/02-14:00:46.914 2895 Level-0 table #106: started
+2018/02/02-14:00:47.166 2895 Level-0 table #106: 1367840 bytes OK
+2018/02/02-14:00:47.340 2895 Delete type=0 #97
+2018/02/02-14:01:30.616 2895 Compacting 1@1 + 6@2 files
+2018/02/02-14:01:30.921 2895 Generated table #107@1: 7622 keys, 2200440 bytes
+2018/02/02-14:01:31.132 2895 Generated table #108@1: 9108 keys, 2163959 bytes
+2018/02/02-14:01:31.332 2895 Generated table #109@1: 7453 keys, 2138893 bytes
+2018/02/02-14:01:31.621 2895 Generated table #110@1: 68766 keys, 2216697 bytes
+2018/02/02-14:01:31.854 2895 Generated table #111@1: 30108 keys, 2215499 bytes
+2018/02/02-14:01:32.065 2895 Generated table #112@1: 14848 keys, 2224602 bytes
+2018/02/02-14:01:32.131 2895 Generated table #113@1: 16 keys, 3573 bytes
+2018/02/02-14:01:32.131 2895 Compacted 1@1 + 6@2 files => 13163663 bytes
+2018/02/02-14:01:32.209 2895 compacted to: files[ 0 0 7 0 0 0 0 ]
+2018/02/02-14:01:32.210 2895 Delete type=2 #99
+2018/02/02-14:01:32.211 2895 Delete type=2 #100
+2018/02/02-14:01:32.213 2895 Delete type=2 #101
+2018/02/02-14:01:32.215 2895 Delete type=2 #102
+2018/02/02-14:01:32.217 2895 Delete type=2 #103
+2018/02/02-14:01:32.219 2895 Delete type=2 #104
+2018/02/02-14:01:32.220 2895 Delete type=2 #106

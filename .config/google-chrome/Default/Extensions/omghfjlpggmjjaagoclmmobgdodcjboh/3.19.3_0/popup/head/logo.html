@@ -1,0 +1,29 @@
+<link rel="import" href="/polymer/polymer.html">
+<dom-module id="head-logo">
+  <template>
+    <style>
+    :host{
+      display: block;
+      padding: 5px 5px 0 5px;
+      float: left;
+    }
+
+    .Head_Logo_Premium{
+      display: none;
+    }
+    :host.stPremium .Head_Logo_Premium{
+      display: block;
+    }
+    .Head_Logo_Free{
+      display: block;
+    }
+    :host.stPremium .Head_Logo_Free{
+      display: none;
+    }
+    </style>
+
+    <img class="Head_Logo_Premium" src="/images/ext-logo.png" width="142" height="46">
+    <img class="Head_Logo_Free" src="/images/ext-logo-wo-premium.png" width="142" height="46">
+  </template>
+  <script type="text/javascript" src="/popup/head/logo.js"></script>
+</dom-module>

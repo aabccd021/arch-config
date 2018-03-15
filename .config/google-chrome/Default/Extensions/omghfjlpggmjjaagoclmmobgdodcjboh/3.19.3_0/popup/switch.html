@@ -1,0 +1,104 @@
+<link rel="import" href="/polymer/polymer.html">
+<dom-module id="c-switch">
+  <template>
+    <style>
+    :host{
+      display: block;
+      width: 61px;
+      height: 26px;
+      cursor: pointer;
+      position: relative;
+    }
+    :host *{
+      cursor: pointer;
+    }
+    .BackgroundText{
+      display: block;
+      background: #994136;
+      border-radius: 13px;
+      width: 61px;
+      height: 26px;
+      line-height: 26px;
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset, 0 0 2px rgba(0, 0, 0, 0.15) inset;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset, 0 0 2px rgba(0, 0, 0, 0.15) inset;
+      font-size: 13px;
+      height: inherit;
+      position: relative;
+      text-transform: uppercase;
+      -webkit-transition: all 0.15s ease-out 0s;
+      -o-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s;
+    }
+    .BackgroundText_Off,
+    .BackgroundText_On{
+      position: absolute;
+      top: 0;
+      -webkit-transition: inherit;
+      -o-transition: inherit;
+      transition: inherit;
+    }
+    .BackgroundText_Off{
+      color: #fff;
+      right: 8px;
+    }
+    .BackgroundText_On{
+      color: white;
+      left: 11px;
+      opacity: 0;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    }
+    :host.on .BackgroundText{
+      background: #3b9946;
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset, 0 0 3px rgba(0, 0, 0, 0.2) inset;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset, 0 0 3px rgba(0, 0, 0, 0.2) inset;
+    }
+    :host.on .BackgroundText_Off{
+      opacity: 0;
+    }
+    :host.on .BackgroundText_On{
+      opacity: 1;
+    }
+
+    .Circle{
+      background: #fff;
+      border-radius: 11px;
+      height: 22px;
+      width: 22px;
+      left: 2px;
+      position: absolute;
+      top: 2px;
+      -webkit-transition: left 0.15s ease-out 0s;
+      -o-transition: left 0.15s ease-out 0s;
+      transition: left 0.15s ease-out 0s;
+    }
+    .Circle:before{
+    	content: "";
+      background: #f9f9f9 -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(white)) repeat scroll 0 0;
+      background: #f9f9f9 -webkit-linear-gradient(top, #eeeeee, white) repeat scroll 0 0;
+      background: #f9f9f9 -o-linear-gradient(top, #eeeeee, white) repeat scroll 0 0;
+      background: #f9f9f9 linear-gradient(to bottom, #eeeeee, white) repeat scroll 0 0;
+      border-radius: 6px;
+      -webkit-box-shadow: 0 1px rgba(0, 0, 0, 0.02) inset;
+              box-shadow: 0 1px rgba(0, 0, 0, 0.02) inset;
+      height: 12px;
+      left: 50%;
+      margin: -6px 0 0 -6px;
+      position: absolute;
+      top: 50%;
+      width: 12px;
+    }
+    :host.on .Circle{
+      -webkit-box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+              box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+      left: 37px; /* left: auto; right: 2px; */
+    }
+    </style>
+
+    <div class="BackgroundText">
+      <div class="BackgroundText_Off">[[translations.off]]</div>
+      <div class="BackgroundText_On">[[translations.on]]</div>
+    </div>
+    <div class="Circle"></div>
+  </template>
+  <script type="text/javascript" src="/popup/switch.js"></script>
+</dom-module>

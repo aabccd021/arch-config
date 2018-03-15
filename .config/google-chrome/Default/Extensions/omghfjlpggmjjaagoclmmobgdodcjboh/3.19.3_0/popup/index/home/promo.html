@@ -1,0 +1,264 @@
+<link rel="import" href="/polymer/polymer.html">
+<dom-module id="index-home-promo">
+  <template>
+    <style>
+    :host{
+    	height:82px;
+    	display: none;
+    }
+    :host.visible{
+    	display: block;
+    }
+
+    .Downloadable{
+      height: 82px;
+      overflow: hidden;
+      margin: 4px 4px 0;
+      position: relative;
+    }
+    .Downloadable a{
+      display: block;
+      position: absolute;
+      top:0px;right:0px;bottom:0px;left:0px;
+      overflow: hidden;
+      text-indent: -9999px;
+      z-index: 3;
+    }
+
+    .Element{
+    	position: relative;
+    }
+    .Element_Link{
+    	display: block;
+    	position: absolute;
+    	top:0px;right:0px;bottom:0px;left:0px;
+    	white-space: nowrap;
+    	overflow: hidden;
+    	text-indent: -9999px;
+    	font-size: 0;
+    }
+
+    .PremiumUpgrade{
+    	position: relative;
+    	background: #e5ebef;
+    	padding: 0 10px 0 80px;
+    	height: 82px;
+      margin: 6px 5px 0 5px;
+      border-radius: 4px;
+      color: white;
+    }
+    .PremiumUpgrade:before{
+    	content: "";
+    	display: block;
+    	width: 67px;
+    	overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:67px;
+    	position: absolute;
+    	top: 50%;
+    	margin-top: -33px;
+    	left: 3px;
+    }
+    .PremiumUpgrade>.in{
+    	display: table;
+    	width: 100%;
+    	height: 100%;
+    }
+    .PremiumUpgrade>.in>.in{
+    	display: table-cell;
+    	vertical-align: middle;
+    }
+    .PremiumUpgrade.stServers:before{
+    	background: url('/images/promos/advantages.png') 0 -134px no-repeat;
+    }
+    .PremiumUpgrade.stSpeed:before{
+    	background: url('/images/promos/advantages.png') 0 -67px no-repeat;
+    }
+    .PremiumUpgrade.stLocations:before{
+    	background: url('/images/promos/advantages.png') 0 0 no-repeat;
+    }
+    .PremiumUpgrade_Title{
+      font-size: 16px;
+      color: #3d9740;
+      font-weight: 600;
+    }
+    .PremiumUpgrade_Text{
+    	color:#28344f;
+    	font-size:15px;
+    	margin-top: 2px;
+    	font-weight: 500;
+    }
+
+    .FreeTrial{
+    	height: 82px;
+    	margin: 6px 5px 0 5px;
+    	border-radius: 4px;
+    	background: #e5ebef;
+    	position: relative;
+    	padding-left: 83px;
+    }
+    .FreeTrial:before{
+      content: "";
+    	display: block;
+    	overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:48px;
+      width: 50px;
+      background: url('/images/promos/free_rocket.png') 0 0 no-repeat;
+    	position: absolute;
+    	top: 50%;
+    	margin-top: -24px;
+    	left: 33px;
+    }
+    .FreeTrial>.in{
+    	display: table;
+    	width: 100%;
+    	height: 100%;
+    	text-align: center;
+    }
+    .FreeTrial>.in>.in{
+    	display: table-cell;
+    	vertical-align: middle;
+    }
+    .FreeTrial_Title{
+    	font-size: 16px;
+      color: #3d9740;
+      font-weight: 600;
+    }
+    .FreeTrial_Button{
+    	display:inline-block;vertical-align:top;
+      color: #fff;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 4px;
+      background: #3d973f;
+      margin: 9px 0 0;
+      font-size: 14px;
+      padding: 0 45px;
+      font-weight: bold;
+    }
+    .FreeTrial_Button:link,
+    .FreeTrial_Button:visited{
+    	text-decoration: none;
+    }
+
+    .Expire{
+      margin: 1px 0 0;
+      background: #fcd0cb;
+      border-bottom: 1px #994136 solid;
+      padding: 10px 10px 10px;
+    }
+    .Expire_Close{
+    	position: absolute;
+    	font-size: 32px;
+    	top: -5px;
+    	right: -1px;
+    	color: #994136;
+      cursor: pointer;
+    }
+    .Expire_Close:hover{
+      color: #fff;
+    }
+    .Expire_Title{
+    	color: #994136;
+    	font-size: 14px;
+    	text-align: center;
+    }
+    .Expire_Description{
+      color: #1c304e;
+      font-size: 12px;
+    	text-align: center;
+    }
+
+    .Expire_Link_Out{
+    	text-align: center;
+    	font-size: 12px;
+    	padding-top: 5px;
+    }
+    .Expire_Link{
+    	display:inline-block;vertical-align:top;
+    	cursor:pointer;
+    }
+    .Expire_Link:link,
+    .Expire_Link:visited{
+    	text-decoration: none;
+    	border-bottom:1px #1c304e solid;
+    	color: #1c304e;
+    }
+    .Expire_Link:hover{
+    	color: #fff;
+    	border-bottom:1px solid #fff;
+    }
+
+    .Speed{
+    	background: #c0392b;
+    	margin: 6px 6px 0 6px;
+    	border-radius: 4px;
+    	height: 82px;
+    	color: #fff;
+    	text-align: center;
+    	line-height: 1;
+    }
+    .Speed > .in{
+    	display: table;
+    	height: 100%;
+    	width: 100%;
+    }
+    .Speed > .in > .in{
+    	display: table-cell;
+    	vertical-align: middle;
+    	padding: 0 7px;
+    }
+    .Speed_Title{
+    	text-transform: uppercase;
+    	font-size: 23px;
+    	font-weight: bold;
+    }
+    .Speed_Price{
+    	color: #f1c40f;
+    	font-size: 18px;
+    	font-weight: bold;
+    	padding: 3px 0 7px;
+    }
+    .Speed_Days{
+    	color: #e1afab;
+    	font-size: 12px;
+    }
+    </style>
+
+    <div class="Downloadable" data-name="downloadable promo" hidden$="[[!conditionShowPromo(activePromo, 0)]]"></div>
+
+    <div class="Expire" data-premium="true" data-name="premium expiration soon" hidden$="[[!conditionShowPromo(activePromo, 1)]]">
+      <div class="Expire_Close b-ico-x js-close-popup" on-tap="expirationClose"></div>
+      <div class="Expire_Title">[[translations.premiumIsAboutToExpire]]</div>
+      <div class="Expire_Description">[[translations.goAheadAndRenewIt]]</div>
+      <div class="Expire_Link_Out"><!--
+     --><a class="Expire_Link" href="[[expirationPremiumLink]]" target="_blank">
+          [[translations.continueUsing]]
+        </a><!--
+   --></div>
+    </div>
+
+    <div class="Element" data-premium="false" data-name="guest free trial" hidden$="[[!conditionShowPromo(activePromo, 2)]]">
+      <div class="FreeTrial">
+        <div class="in"><div class="in">
+          <div class="FreeTrial_Title">[[translations.turboSpeedInFree]]</div>
+          <div><div class="FreeTrial_Button">[[translations.getFreePremium]]</div></div>
+        </div></div>
+        <a class="Element_Link" href="offer_v2.html" target="_blank">
+          [[translations.getFreePremium]]
+        </a>
+      </div>
+    </div>
+
+    <div class="Element" data-premium="false" data-weight="1" data-ga="banner_speed_new" hidden$="[[!conditionShowPromo(activePromo, 3)]]">
+      <div class="Speed">
+        <div class="in"><div class="in">
+          <div class="Speed_Title">[[translations.upgradeConnectionSpeed]]</div>
+          <div class="Speed_Price">[[translations.fromOnlyPricePerMonth]]</div>
+          <div class="Speed_Days">[[translations.moneyBackGuarantee]]</div>
+        </div></div>
+        <a class="Element_Link" href="[[premiumLink]]" target="_blank">
+          [[translations.getTurboSpeed]]
+        </a>
+      </div>
+    </div>
+  </template>
+  <script src="/popup/index/home/promo.js" type="text/javascript"></script>
+</dom-module>

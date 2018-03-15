@@ -1,0 +1,81 @@
+<link rel="import" href="/polymer/polymer.html">
+<link rel="import" href="/popup/index/menu.html">
+<link rel="import" href="/popup/index/home.html">
+<link rel="import" href="/popup/index/locations.html">
+<link rel="import" href="/popup/index/filters.html">
+<dom-module id="main-index">
+  <template>
+    <style>
+    .Foot{
+      height: 38px;
+      padding: 0 10px;
+      border-top: 1px solid #bcbcbc;
+      background: #f5f5f5;
+    	position: absolute;
+    	right:0px;bottom:0px;left:0px;
+    }
+    .Foot:after{
+    	content:' ';clear:both;display:block;width:0;height:0;overflow:hidden;font-size:0;
+    }
+    .Foot c-switch{
+      margin: 7px 0 0;
+      float: right;
+    }
+
+    .Switch{
+    	position: absolute;
+    	top:0px;bottom:38px;left:0px;
+    	width: 100%;
+    	white-space: nowrap;
+    }
+    .Switch > *{
+    	display:inline-block;vertical-align:top;
+    	width: 100%;
+    	height: 100%;
+    	position: relative;
+    	overflow: hidden;
+    	white-space: normal;
+    }
+
+    .Help{
+      float: right;
+      position: relative;
+      margin-top: 12px;
+      padding-left: 19px;
+      cursor: pointer;
+      font-size: 12px;
+      line-height: 18px;
+      color: #3b9946;
+    }
+    .Help:after{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -7px;
+      background: url('/images/menu_icons.png') 0 -100px no-repeat;
+      width: 14px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:14px;
+    }
+    .Help:hover:after{
+      background-position: 0 -150px;
+    }
+    </style>
+
+    <div class="Switch">
+      <index-home></index-home>
+    </div>
+
+    <div class="Foot">
+      <template is="dom-if" if="[[switchVisible]]">
+        <c-switch on-tap="switchClick" on="[[switchOn]]"></c-switch>
+      </template>
+      <template is="dom-if" if="[[helpVisible]]">
+        <div class="Help" on-tap="openHelp">[[translations.help]]</div>
+      </template>
+      <index-menu></index-menu>
+    </div>
+  </template>
+  <script src="/popup/main-index.js" type="text/javascript"></script>
+</dom-module>

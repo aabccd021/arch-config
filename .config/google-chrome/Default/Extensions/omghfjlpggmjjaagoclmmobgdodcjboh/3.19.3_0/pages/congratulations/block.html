@@ -1,0 +1,49 @@
+<link rel="import" href="/polymer/polymer.html">
+<dom-module id="main-block">
+  <template>
+    <style>
+    :host{
+      display: block;
+    }
+    </style>
+
+    <div id="main-nav" class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="[[mainLink]]" target="_blank">
+            <img class="site-logo" src="/images/congratulations/logo.png" height="40" alt="Browsec logo">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container about-ext">
+      <section class="welcome">
+        <h1 class="section-title">[[translations.activated]]</h1>
+        <p>[[translations.surfingSecured]]<br>[[translations.clickToolbarIconAndTurnOn]]</p>
+        <img class="img-extention" width="600" height="300" src="/images/congratulations/extention.png">
+      </section>
+      <section class="benefit-section">
+        <h1 class="section-title">[[translations.getMoreWithPremium]]</h1>
+        <div class="row">
+          <div class="col-md-4 benefit morecountries">
+            <div class="benefit--title">[[translations.premiumLocations]]</div>
+            <p>[[translations.accessPremiumLocations]]</p>
+          </div>
+          <div class="col-md-4 benefit fastspeed">
+            <div class="benefit--title">[[translations.turboSpeed]]</div>
+            <p>[[translations.dedicatedLanes]]</p>
+          </div>
+          <div class="col-md-4 benefit servers">
+            <div class="benefit--title">[[translations.premiumServers]]</div>
+            <p>[[translations.performanceGuaranteed]]</p>
+          </div>
+        </div>
+        <a class="cta-green-btn" href="[[premiumLink]]" target="_blank">
+          [[translations.checkPremiumPlans]]
+        </a>
+      </section>
+    </div>
+  </template>
+
+  <script src="/pages/congratulations/block.js" type="text/javascript"></script>
+</dom-module>

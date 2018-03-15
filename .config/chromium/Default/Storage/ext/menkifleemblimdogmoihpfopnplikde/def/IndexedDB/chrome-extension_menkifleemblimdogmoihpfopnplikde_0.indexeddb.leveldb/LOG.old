@@ -1,0 +1,16 @@
+2018/02/08-13:33:38.025 1750 Reusing MANIFEST /home/aabccd021/.config/chromium/Default/Storage/ext/menkifleemblimdogmoihpfopnplikde/def/IndexedDB/chrome-extension_menkifleemblimdogmoihpfopnplikde_0.indexeddb.leveldb/MANIFEST-000001
+2018/02/08-13:33:38.025 1750 Recovering log #4
+2018/02/08-13:33:38.131 1750 Reusing old log /home/aabccd021/.config/chromium/Default/Storage/ext/menkifleemblimdogmoihpfopnplikde/def/IndexedDB/chrome-extension_menkifleemblimdogmoihpfopnplikde_0.indexeddb.leveldb/000004.log 
+2018/02/08-13:35:38.484 3147 Level-0 table #8: started
+2018/02/08-13:35:40.199 3147 Level-0 table #8: 3209496 bytes OK
+2018/02/08-13:35:40.302 3147 Delete type=0 #4
+2018/02/08-13:35:51.682 3147 Compacting 1@1 + 1@2 files
+2018/02/08-13:35:52.164 3147 Generated table #9@1: 9041 keys, 2176728 bytes
+2018/02/08-13:35:52.284 3147 Generated table #10@1: 73 keys, 9354 bytes
+2018/02/08-13:35:52.284 3147 Compacted 1@1 + 1@2 files => 2186082 bytes
+2018/02/08-13:35:52.441 3147 compacted to: files[ 0 0 2 0 0 0 0 ]
+2018/02/08-13:35:52.441 3147 Delete type=2 #5
+2018/02/08-13:35:52.443 3147 Delete type=2 #8
+2018/02/08-13:36:23.796 3147 Level-0 table #12: started
+2018/02/08-13:36:24.158 3147 Level-0 table #12: 4388315 bytes OK
+2018/02/08-13:36:24.433 3147 Delete type=0 #7

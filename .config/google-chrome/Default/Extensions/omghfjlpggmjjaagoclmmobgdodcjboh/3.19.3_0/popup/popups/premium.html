@@ -1,0 +1,173 @@
+<link rel="import" href="/polymer/polymer.html">
+<dom-module id="popup-premium">
+  <template>
+    <style>
+    :host{
+    	display: block;
+      position: absolute;
+      z-index: 3;
+      top:0px;right:0px;left:0px;
+    	height: 100%;
+      background: #fff;
+    }
+
+    .Head{
+      background: #28344f;
+      color: #fff;
+      text-align: center;
+      font-size: 17px;
+      line-height: 36px;
+      font-weight: 500;
+      position: relative;
+    	padding: 9px 10px 9px;
+      height: auto;
+      overflow: visible;
+    }
+
+    .Close{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -16px;
+      cursor: pointer;
+      color: #7e8595;
+      font-size: 32px;
+      line-height: 1;
+    }
+    .Close:hover{
+    	color:#fff;
+    }
+    .Close:before{
+    	content: "\e904";
+    }
+
+    .Features{
+      padding: 10px 35px 15px 10px;
+      color: #7a7c7f;
+    }
+    .Features>.e{
+      min-height: 95px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 4px 0 0px 90px;
+      position: relative;
+    }
+    :host.withPrice .Features>.e{
+      min-height: 82px;
+    }
+    .Features>.e:before{
+      content: "";
+      width: 67px;
+      overflow:hidden;font-size:0;text-indent:-9999px;height:0;padding-top:67px;
+      position: absolute;
+      left: 4px;
+      top: 10px;
+      background: url('/images/promos/advantages.png') no-repeat scroll -300px -300px;
+    }
+    .Features>.e.iconMoreCountries:before{
+      background-position: 0 0;
+    }
+    .Features>.e.iconFastSpeed:before{
+    	background-position: 0 -67px;
+    }
+    .Features>.e.iconServers:before{
+      background-position: 0 -134px;
+    }
+
+    .Feature_Name{
+      color: #28334e;
+      font-size: 17px;
+      margin: 9px 0 2px;
+      line-height: 1.29;
+    }
+    .Feature_Text{
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .Button_Out{
+      /*position: absolute;right:5px;bottom:5px;left:5px;*/
+      padding: 0 5px;
+    }
+    .Button{
+      display: table;
+      width: 100%;
+      height: 45px;
+      background: #3d973f;
+      text-align: center;
+      border-radius: 4px;
+    }
+    :host.withPrice .Button{
+      height: 60px;
+    }
+    .Button:link,
+    .Button:visited,
+    .Button:hover,
+    .Button:active{
+      color: #fff;
+      text-decoration: none;
+    }
+    .Button *{
+      cursor: pointer;
+    }
+    .Button>.In{
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .Button_Name{
+      display: block;
+      font-size: 17px;
+    }
+    :host.withPrice .Button_Name{
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .Button_Price{
+      display: block;
+      font-size: 14px;
+    }
+
+    .Guarantee{
+      color: #808080;
+      font-size: 12px;
+      text-align: center;
+      padding-top: 7px;
+    }
+    </style>
+
+    <div class="Head">
+      [[translations.browsecPremium]]
+      <div class="Close b-ico-x" on-tap="close"></div>
+    </div>
+    <div class="Features">
+      <div class="e iconMoreCountries">
+        <div class="Feature_Name">[[translations.premiumLocations]]</div>
+        <div class="Feature_Text">[[translations.accessInternet]]</div>
+      </div>
+      <div class="e iconFastSpeed">
+        <div class="Feature_Name">[[translations.turboSpeed]]</div>
+        <div class="Feature_Text">[[translations.dedicatedLanes]]</div>
+      </div>
+      <div class="e iconServers">
+        <div class="Feature_Name">[[translations.premiumServers]]</div>
+        <div class="Feature_Text">[[translations.performanceGuaranteed]]</div>
+      </div>
+    </div>
+    <div class="Button_Out">
+      <a href="[[premiumLink]]" class="Button" on-tap="linkClick" target="_blank">
+        <span class="In">
+          <span class="Button_Name">[[translations.getPremiumNow]]</span>
+          <template is="dom-if" if="[[withPrice]]">
+            <span class="Button_Price">[[translations.onlyPricePerMonth]]</span>
+          </template>
+        </span>
+      </a>
+    </div>
+    <template is="dom-if" if="[[withPrice]]">
+      <div class="Guarantee">[[translations.moneyBackGuarantee]]</div>
+    </template>
+  </template>
+
+  <script src="/popup/popups/premium.js" type="text/javascript"></script>
+</dom-module>
